@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   
+    <color name="white_color">#ffffffff</color> 
+    <color name="fulltransparent">#00ffffff</color>
+    
+    <color name="alert_dialog_title">#ff2ca9e8</color>
+    <color name="alert_dialog_divi_top">#ff2ca9e8</color>
+    <color name="alert_dialog_divi">#ffe3e5e6</color>
+    <color name="alert_dialog_divi_bottom">#ff494a4c</color>
+    <color name="alert_dialog_content">#ff494a4c</color>
+    <color name="alert_dialog_sub_content">#ff7a7d80</color>
+    <color name="alert_dialog_background">#ffdfe2e6</color>
+    <color name="alert_dialog_pressed">#ffdfe2e6</color>
+    <color name="alert_dialog_button_background">#fff2f2f2</color>
+    <color name="alert_dialog_button_pressed">#ffcdd0d4</color>
+    <color name="alert_dialog_vline">#ffbabcbf</color>
+</resources>
