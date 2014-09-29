@@ -4,39 +4,80 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
 
 	 @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
 		
-		/**
-		 * 1：progress dialog
-		 */
-		CSProgressDialog csDialog = new CSProgressDialog(this);
-		csDialog.setCancelable(true);//物理返回键是否关闭
-		csDialog.show();
-		csDialog.dismiss();
-		
-		/**
-		 * 2：带有一个按钮的dialog
-		 */
-		CSOKDialog.createBuilder(this).setMsg("这是一条信息").show();
-		
-		/**
-		 * 3:两个按钮的diallog
-		 */
-		final CSOKCancelDialog okCancelDialog = CSOKCancelDialog.createBuilder(this).setMsg("这是一条信息");
-		okCancelDialog.setOKOnClickListener(new OnClickListener() {
+		Button btn1 = (Button) this.findViewById(R.id.btn1);
+		Button btn2 = (Button) this.findViewById(R.id.btn2);
+		Button btn3 = (Button) this.findViewById(R.id.btn3);
+		btn1.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View view) {
-				okCancelDialog.dismiss();
-				//TODO...
+				CSProgressDialog csDialog = new CSProgressDialog(MainActivity.this);
+				csDialog.setCancelable(true);//物理返回键是否关闭
+				csDialog.show();
 			}
 		});
-		okCancelDialog.show();
+		btn2.setOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View view) {
+
+						CSOKDialog.createBuilder(MainActivity.this).setMsg("这是一条信息").show();
+						
+					}
+				});
+		btn3.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View view) {
+				final CSOKCancelDialog okCancelDialog = CSOKCancelDialog.createBuilder(MainActivity.this).setMsg("这是一条信息");
+				okCancelDialog.setOKOnClickListener(new OnClickListener() {
+					
+					@Override
+					public void onClick(View view) {
+						okCancelDialog.dismiss();
+						//TODO...
+					}
+				});
+				okCancelDialog.show();
+			}
+		});
+		
+		
+//		/**
+//		 * 1：progress dialog
+//		 */
+//		CSProgressDialog csDialog = new CSProgressDialog(this);
+//		csDialog.setCancelable(true);//物理返回键是否关闭
+//		csDialog.show();
+//		csDialog.dismiss();
+//		
+//		/**
+//		 * 2：带有一个按钮的dialog
+//		 */
+//		CSOKDialog.createBuilder(this).setMsg("这是一条信息").show();
+//		
+//		/**
+//		 * 3:两个按钮的diallog
+//		 */
+//		final CSOKCancelDialog okCancelDialog = CSOKCancelDialog.createBuilder(this).setMsg("这是一条信息");
+//		okCancelDialog.setOKOnClickListener(new OnClickListener() {
+//			
+//			@Override
+//			public void onClick(View view) {
+//				okCancelDialog.dismiss();
+//				//TODO...
+//			}
+//		});
+//		okCancelDialog.show();
 		
 	}
 

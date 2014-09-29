@@ -1,4 +1,5 @@
-CSDialog
-========
+#  StyledDialogs for Android
 
-android 自定义弹框dialog
+自定义dialog
+
+
