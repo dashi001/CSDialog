@@ -16,12 +16,14 @@ CSProgressDialog csDialog = new CSProgressDialog(this);
 csDialog.setCancelable(true);//物理返回键是否关闭
 csDialog.show();
 csDialog.dismiss();
+```
 
 ```java
 /**
  * 2：带有一个按钮的dialog
  */
 CSOKDialog.createBuilder(this).setMsg("这是一条信息").show();
+```
 
 ```java
 /**
@@ -37,5 +39,6 @@ okCancelDialog.setOKOnClickListener(new OnClickListener() {
     }
 });
 okCancelDialog.show();
+```
 
 
