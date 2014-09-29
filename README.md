@@ -2,4 +2,6 @@
 
 自定义dialog
 
+ ![hello](img/csdialog-show.png)
+
 
